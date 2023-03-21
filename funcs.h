@@ -17,5 +17,6 @@ Assignment: funcs.h, Lab-08
     
     // TASK A
 void invert(int img[MAX_H][MAX_W], int& h, int& w);
+void invertRightHalf(int img[MAX_H][MAX_W], int& h, int& w);
 
 #endif
