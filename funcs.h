@@ -29,6 +29,8 @@ void whiteBox(int img[MAX_H][MAX_W], int& h, int& w);
 void whiteBoxFrame(int img[MAX_H][MAX_W], int& h, int& w);
     // TASK E
 void scale(int img[MAX_H][MAX_W], int& h, int& w);
+    // TASK F
+void pixelate(int img[MAX_H][MAX_W], int& h, int& w);
 
 
 #endif
