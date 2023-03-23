@@ -96,31 +96,58 @@ void whiteBoxFrame(int img[MAX_H][MAX_W], int& h, int& w) {
     }
 }
 
-// // TASK E
-//     // scales the picture up
+// TASK E
+    // scales the picture up
+void scale(int img[MAX_H][MAX_W], int& h, int& w) {
+	int newImg[MAX_H][MAX_W];   // create a new image array to hold the scaled image
+	for(int row = 0; row < h; row++) { 
+            // copy the pixel value into a 2x2 square in the new image array
+		for(int col = 0; col < w; col++) {
+			newImg[row*2][col*2] = img[row][col];
+			newImg[row*2+1][col*2] = img[row][col];
+			newImg[row*2][col*2+1] = img[row][col];
+			newImg[row*2+1][col*2+1] = img[row][col];
+		}
+	}
+	    // double the height and width of the image
+        // write the image 
+	writeImage("task-e.pgm", newImg, h*2, w*2);
+}
+
+// TASK F
+    // pixelates the image
+void pixelate(int img[MAX_H][MAX_W], int& h, int& w) {
+    
+}
+
 // void scale(int img[MAX_H][MAX_W], int& h, int& w) {
-//     int newH = h * 2; // double the height of the image
-//     int newW = w * 2; // double the width of the image
-//     int newImg[MAX_H][MAX_W]; // create a new image array to hold the scaled image
+//     // int newH = h * 2; // double the height of the image
+//     // int newW = w * 2; // double the width of the image
+//     // int newImg[MAX_H][MAX_W]; // create a new image array to hold the scaled image
     
 //     for (int row = 0; row < h; row++) {
 //         for (int col = 0; col < w; col++) {
 //             // copy the pixel value into a 2x2 square in the new image array
-//             newImg[row * 2][col * 2] = img[row][col];
-//             newImg[row * 2][col * 2 + 1] = img[row][col];
-//             newImg[row * 2 + 1][col * 2] = img[row][col];
-//             newImg[row * 2 + 1][col * 2 + 1] = img[row][col];
+//             // newImg[row * 2][col * 2] = img[row][col];
+//             // newImg[row * 2][col * 2 + 1] = img[row][col];
+//             // newImg[row * 2 + 1][col * 2] = img[row][col];
+//             // newImg[row * 2 + 1][col * 2 + 1] = img[row][col];
+//             img[row * 2][col * 2] = img[row][col];
+//             img[row * 2][col * 2 + 1] = img[row][col];
+//             img[row * 2 + 1][col * 2] = img[row][col];
+//             img[row * 2 + 1][col * 2 + 1] = img[row][col];
 //         }
+//         // writeImage("task-e.pgm", newImg, h, w); 
 //     }
     
-//     // update the original image height and width variables
-//     h = newH;
-//     w = newW;
+//     //     // update the original image height and width variables
+//     // h = newH;
+//     // w = newW;
     
 //     // copy the new image array back into the original image array
-//     for (int row = 0; row < h; row++) {
-//         for (int col = 0; col < w; col++) {
-//             img[row][col] = newImg[row][col];
-//         }
-//     }
+//     // for (int row = 0; row < h; row++) {
+//     //     for (int col = 0; col < w; col++) {
+//     //         img[row][col] = newImg[row][col];
+//     //     }
+//     // }
 // }

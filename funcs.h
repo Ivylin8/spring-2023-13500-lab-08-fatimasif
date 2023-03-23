@@ -28,7 +28,7 @@ void whiteBox(int img[MAX_H][MAX_W], int& h, int& w);
     // TASK D
 void whiteBoxFrame(int img[MAX_H][MAX_W], int& h, int& w);
     // TASK E
-// void scale(int img[MAX_H][MAX_W], int& h, int& w);
+void scale(int img[MAX_H][MAX_W], int& h, int& w);
 
 
 #endif
